@@ -1,26 +1,22 @@
 FastAPI 作成したで API リポジトリ
 
-# method Post
+### method Post
 
-## user create
+- user create
+  /users/?username="string"&device_id="string"&password"= "string"
 
-/users/?username="string"&device_id="string"&password"= "string"
+- sales create
+  /sales/?user_id="num"
 
-## sales create
+### method Get
 
-/sales/?user_id="num"
+- user search
+  /users/?username="string"&password="string"
 
-# method Get
+- user get phone deviceId
+  /users/?deviceId="string"
 
-## user search
+- user sales info search <return> list
+  /sales/?userId="string"
 
-/users/?username="string"&password="string"
-
-## user get phone deviceId
-
-/users/?deviceId="string"
-
-## user sales info search <return> list
-
-/sales/?userId="string"
 # fastapi-Revenue-Profit
