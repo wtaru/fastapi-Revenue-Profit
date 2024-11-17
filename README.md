@@ -23,4 +23,8 @@ FastAPI 作成したで API リポジトリ
 - user sales info search <return> list
   /sales/?userId="string"
 
+### method Put
+
+users/"device_id"?is_active="bool"
+
 # fastapi-Revenue-Profit
