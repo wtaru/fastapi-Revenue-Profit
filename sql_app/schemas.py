@@ -29,3 +29,6 @@ class Sales(SalesBase):
     user_id: int
     class Config:
         from_attributes = True
+        
+class MessageResponse(BaseModel):
+    message: str

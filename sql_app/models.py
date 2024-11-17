@@ -7,7 +7,7 @@ class User(Base):
     device_id = Column(String, unique=True, index=True)
     username = Column(String, unique=True, index=True)
     password = Column(String)
-    is_active = Column(Boolean, default=False)
+    is_active = Column(Boolean, default=True)
     
 class Sales(Base):
     __tablename__ = "sales"

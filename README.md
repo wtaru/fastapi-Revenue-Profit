@@ -3,7 +3,11 @@ FastAPI 作成したで API リポジトリ
 ### method Post
 
 - user create
-  /users/?username="string"&device_id="string"&password"= "string"
+  /users/
+  data:
+  username: "string",
+  device_id: "string",
+  password": "string"
 
 - sales create
   /sales/?user_id="num"

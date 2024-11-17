@@ -46,3 +46,10 @@ def create_sales(sales: schemas.SalesCreate, user_id: int, db: Session=Depends(g
 def get_sales(user_id: int, db: Session=Depends(get_db)):
     sales = crud.get_sales(db=db, user_id=user_id)
     return sales
+
+@app.delete("/users/{user_id}", response_model=schemas.MessageResponse)
+def deleteUser(user_id: int, db: Session=Depends(get_db)):
+    success = crud.delete_user(db=db, user_id=user_id)
+    if success:
+        return {"message": "User deleted successfully."}
+    return {"message": "User not found."}, 404

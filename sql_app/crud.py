@@ -47,3 +47,11 @@ def create_sales(db: Session, sales: schemas.SalesCreate, user_id: int):
     db.commit()
     db.refresh(db_sales)
     return db_sales
+
+def delete_user(db: Session, user_id: int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user:
+        db.delete(user)
+        db.commit()
+        return True  # 削除が成功した場合は True を返す
+    return False  # ユーザーが見つからなかった場合は False を返す
