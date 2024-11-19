@@ -9,6 +9,7 @@ class UserCreate(UserBase):
     
 class User(UserBase):
     id: int
+    password: str = Field(min_length=4)
     is_active: bool
     class Config:
         from_attributes = True
