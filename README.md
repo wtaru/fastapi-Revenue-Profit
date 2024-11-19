@@ -25,6 +25,6 @@ FastAPI 作成したで API リポジトリ
 
 ### method Put
 
-users/"device_id"?is_active="bool"
+/users/update/"device_id"?is_active="bool"
 
 # fastapi-Revenue-Profit
